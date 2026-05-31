@@ -1,46 +1,12 @@
 {
 	"staticPath": "firmware",
 	"role": {
-		"meshos": {
-			"icon": "dashboard",
-			"title": "MeshOS"
-		},
-		"gui": {
-			"icon": "gradient",
-			"title": "Ripple GUI",
-			"tooltip": "all your device settings are saved on internal flash"
-		},
-		"guiSD": {
-			"icon": "gradient",
-			"title": "Ripple GUI: data on SD card",
-			"tooltip": "all your device settings are saved on SD card"
-		},
 		"companionBle": {
 			"icon": "smartphone",
 			"title": "Companion",
 			"subTitle": "Bluetooth",
 			"tooltip": "Chat via mobile phone App or Web Client - Radio can only connect via Bluetooth"
-		},
-		"companionUsb": {
-			"icon": "usb",
-			"title": "Companion",
-			"subTitle": "USB",
-			"tooltip": "Chat via Web client or command line client - Radio can only connect via USB"
-		},
-		"repeater": {
-			"icon": "cell_tower",
-			"title": "Repeater",
-			"tooltip": "Special role just for routing packets. Configured via Config/Console on flasher main page"
-		},
-		"roomServer": {
-			"icon": "forum",
-			"title": "Room Server",
-			"tooltip": "Special role for local room server. Configured via Config/Console on flasher main page"
 		}
-	},
-	"notice": {
-		"otafixRecommended": "<article class='tertiary-container'>We strongly recommend installing <a target='_blank' href='/firmware/${bootloader}'>OTAFIX bootloader</a> for more reliable Bluetooth OTA DFU. <a target='_blank' href='https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#73-q-is-there-a-way-to-lower-the-chance-of-a-failed-ota-device-firmware-update-dfu'>Read more</a></article>",
-		"otafixNeeded": "<article class='tertiary-container'>WARNING: We strongly recommend installing <a target='_blank' href='/firmware/${bootloader}'>OTAFIX bootloader</a> if you plan to update firmware via OTA bluetooth, as factory bootloader does not support it! <a target='_blank' href='https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#73-q-is-there-a-way-to-lower-the-chance-of-a-failed-ota-device-firmware-update-dfu'>Read more</a></article>"
 	},
 	"maker": {
 		"lilygo": {
@@ -62,31 +28,31 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local-merged.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=8"
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* Standard build\n* MAX_CONTACTS=163, MAX_GROUP_CHANNELS=8"
 						},
 						"v1.15.0-hermes1-obs": {
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local-obs-merged.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local-obs.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash\n* For debugging only - slightly larger binary"
+							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash"
 						}
 					}
 				}
@@ -106,31 +72,31 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local-merged.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=8"
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* Standard build\n* MAX_CONTACTS=163, MAX_GROUP_CHANNELS=8"
 						},
 						"v1.15.0-hermes1-obs": {
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local-obs-merged.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local-obs.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash\n* For debugging only - slightly larger binary"
+							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash"
 						}
 					}
 				}
