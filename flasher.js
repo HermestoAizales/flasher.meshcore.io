@@ -653,6 +653,7 @@ function setup() {
   // Absolute path prefix for static assets on GitHub Pages
   const ASSETS_BASE = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/+$/, '');
   const imgPath = (name) => ASSETS_BASE + '/img/' + name;
+  console.log('DEBUG BASE_PATH=' + BASE_PATH + ' ASSETS_BASE=' + ASSETS_BASE + ' imgPath(lora.svg)=' + imgPath('lora.svg'));
 
   return {
     snackbar,
