@@ -67,6 +67,68 @@
 	},
 	"device": [
 		{
+			"maker": "lilygo",
+			"class": "tbeam",
+			"name": "LilyGo T-Beam SX1262",
+			"icon": "/img/lora.svg",
+			"type": "esp32",
+			"firmware": [
+				{
+					"role": "companionBle",
+					"version": {
+						"v1.15.0-hermes1": {
+							"files": [
+								{
+									"type": "flash-wipe",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+									"title": "Combined firmware (Flash Wipe) - RECOMMENDED",
+									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+								},
+								{
+									"type": "flash-update",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+									"title": "Firmware only (OTA Update)",
+									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+								}
+							],
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot"
+						}
+					}
+				}
+			]
+		},
+		{
+			"maker": "lilygo",
+			"class": "tbeam",
+			"name": "LilyGo T-Beam SX1276",
+			"icon": "/img/lora.svg",
+			"type": "esp32",
+			"firmware": [
+				{
+					"role": "companionBle",
+					"version": {
+						"v1.15.0-hermes1": {
+							"files": [
+								{
+									"type": "flash-wipe",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+									"title": "Combined firmware (Flash Wipe) - RECOMMENDED",
+									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+								},
+								{
+									"type": "flash-update",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+									"title": "Firmware only (OTA Update)",
+									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+								}
+							],
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot"
+						}
+					}
+				}
+			]
+		},
+		{
 			"maker": "heltec",
 			"class": "ripple",
 			"name": "Heltec v4 + Expansion Kit (Touch)",
@@ -180,7 +242,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: ‘heard by’ \n* Repeater and room CLI: “get” command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
+							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: \u2018heard by\u2019 \n* Repeater and room CLI: \u201cget\u201d command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
 						},
 						"v7.11": {
 							"files": [
@@ -210,7 +272,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Pixel art: improved colour picker\n* Message details: new ‘Show on Map’ menu\n* New clipboard system: long press for copy/paste"
+							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Pixel art: improved colour picker\n* Message details: new \u2018Show on Map\u2019 menu\n* New clipboard system: long press for copy/paste"
 						},
 						"v7.9": {
 							"files": [
@@ -225,7 +287,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max group channels now 4\n* Auto channel support (name starting with ‘#’)\n* Home Screen: ‘$’ key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added “setperm” and “get acl” support"
+							"notes": "* Max group channels now 4\n* Auto channel support (name starting with \u2018#\u2019)\n* Home Screen: \u2018$\u2019 key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added \u201csetperm\u201d and \u201cget acl\u201d support"
 						},
 						"v7.7": {
 							"files": [
@@ -240,7 +302,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, swipe left/right to go thru filters\n* Identity screen: new advert location pref\n* New “Permissions” screen: set Telemetry permissions\n* Map view: new “Set Advert Loc” menu.\n* Canned Message: special “< prev msg>” item (re-type last msg)"
+							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, swipe left/right to go thru filters\n* Identity screen: new advert location pref\n* New \u201cPermissions\u201d screen: set Telemetry permissions\n* Map view: new \u201cSet Advert Loc\u201d menu.\n* Canned Message: special \u201c< prev msg>\u201d item (re-type last msg)"
 						},
 						"v7.6": {
 							"files": [
@@ -315,7 +377,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Channel details hex or base64 input\n* Screen off long press shortened to 1 sec\n* A-Z key press now jumps to contacts\n* ‘@‘ key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes\n* better Help/Tutorial screens"
+							"notes": "* Channel details hex or base64 input\n* Screen off long press shortened to 1 sec\n* A-Z key press now jumps to contacts\n* \u2018@\u2018 key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes\n* better Help/Tutorial screens"
 						},
 						"v7.0": {
 							"files": [
@@ -345,7 +407,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Sound and other prefs now persisted\n* New “Show on Map” conversation menu\n* MeshCore lib fixes"
+							"notes": "* Sound and other prefs now persisted\n* New \u201cShow on Map\u201d conversation menu\n* MeshCore lib fixes"
 						},
 						"v6.8": {
 							"files": [
@@ -375,7 +437,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Public channel auto-configured (new profiles)\n* Telemetry support (location, ‘online’ indicator)\n* Rooms, unsynced counter (green)\n* Room stats dialog\n* Discover, ‘Send ID Broadcast’ menu"
+							"notes": "* Public channel auto-configured (new profiles)\n* Telemetry support (location, \u2018online\u2019 indicator)\n* Rooms, unsynced counter (green)\n* Room stats dialog\n* Discover, \u2018Send ID Broadcast\u2019 menu"
 						},
 						"v6.6": {
 							"files": [
@@ -513,7 +575,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: ‘heard by’ \n* Repeater and room CLI: “get” command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
+							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: \u2018heard by\u2019 \n* Repeater and room CLI: \u201cget\u201d command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
 						},
 						"v7.11": {
 							"files": [
@@ -543,7 +605,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Pixel art: improved colour picker\n* Message details: new ‘Show on Map’ menu\n* New clipboard system: long press for copy/paste"
+							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Pixel art: improved colour picker\n* Message details: new \u2018Show on Map\u2019 menu\n* New clipboard system: long press for copy/paste"
 						},
 						"v7.9": {
 							"files": [
@@ -558,7 +620,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max group channels now 4\n* Auto channel support (name starting with ‘#’)\n* Home Screen: ‘$’ key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added “setperm” and “get acl” support"
+							"notes": "* Max group channels now 4\n* Auto channel support (name starting with \u2018#\u2019)\n* Home Screen: \u2018$\u2019 key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added \u201csetperm\u201d and \u201cget acl\u201d support"
 						},
 						"v7.7": {
 							"files": [
@@ -573,7 +635,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, swipe left/right to go thru filters\n* Identity screen: new advert location pref\n* New “Permissions” screen: set Telemetry permissions\n* Map view: new “Set Advert Loc” menu.\n* Canned Message: special “< prev msg>” item (re-type last msg)"
+							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, swipe left/right to go thru filters\n* Identity screen: new advert location pref\n* New \u201cPermissions\u201d screen: set Telemetry permissions\n* Map view: new \u201cSet Advert Loc\u201d menu.\n* Canned Message: special \u201c< prev msg>\u201d item (re-type last msg)"
 						},
 						"v7.6": {
 							"files": [
@@ -648,7 +710,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Channel details hex or base64 input\n* Screen off long press shortened to 1 sec\n* A-Z key press now jumps to contacts\n* ‘@‘ key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes\n* better Help/Tutorial screens"
+							"notes": "* Channel details hex or base64 input\n* Screen off long press shortened to 1 sec\n* A-Z key press now jumps to contacts\n* \u2018@\u2018 key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes\n* better Help/Tutorial screens"
 						},
 						"v7.0": {
 							"files": [
@@ -678,7 +740,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Sound and other prefs now persisted\n* New “Show on Map” conversation menu\n* MeshCore lib fixes"
+							"notes": "* Sound and other prefs now persisted\n* New \u201cShow on Map\u201d conversation menu\n* MeshCore lib fixes"
 						},
 						"v6.8": {
 							"files": [
@@ -708,7 +770,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Public channel auto-configured (new profiles)\n* Telemetry support (location, ‘online’ indicator)\n* Rooms, unsynced counter (green)\n* Room stats dialog\n* Discover, ‘Send ID Broadcast’ menu"
+							"notes": "* Public channel auto-configured (new profiles)\n* Telemetry support (location, \u2018online\u2019 indicator)\n* Rooms, unsynced counter (green)\n* Room stats dialog\n* Discover, \u2018Send ID Broadcast\u2019 menu"
 						},
 						"v6.6": {
 							"files": [
@@ -856,7 +918,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Vibe pref now saved\n* Display off pref (to locked screen)\n* UI style updates\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: ‘heard by’\n* Repeater and room CLI: “get” command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
+							"notes": "* Vibe pref now saved\n* Display off pref (to locked screen)\n* UI style updates\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: \u2018heard by\u2019\n* Repeater and room CLI: \u201cget\u201d command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
 						},
 						"v7.11": {
 							"files": [
@@ -886,7 +948,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Map view: keys 0..9 change map contrast\n* Message details: new ‘Show on Map’ menu\n* New clipboard system: long press for copy/paste\n* Locked screen redesign\n* LED alert option: now flashes keyboard backlight"
+							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Map view: keys 0..9 change map contrast\n* Message details: new \u2018Show on Map\u2019 menu\n* New clipboard system: long press for copy/paste\n* Locked screen redesign\n* LED alert option: now flashes keyboard backlight"
 						},
 						"v7.9": {
 							"files": [
@@ -901,7 +963,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max group channels now 4\n* Auto channel support (name starting with ‘#’)\n* Home Screen: ‘$’ key jumps to next contact with unread > 0\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added “setperm” and “get acl” support\n* Map tiles dir now “/tiles-bw” (or “/tiles” as fallback)"
+							"notes": "* Max group channels now 4\n* Auto channel support (name starting with \u2018#\u2019)\n* Home Screen: \u2018$\u2019 key jumps to next contact with unread > 0\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added \u201csetperm\u201d and \u201cget acl\u201d support\n* Map tiles dir now \u201c/tiles-bw\u201d (or \u201c/tiles\u201d as fallback)"
 						},
 						"v7.8": {
 							"files": [
@@ -981,7 +1043,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Vibe pref now saved\n* Display off pref (to locked screen)\n* UI style updates\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: ‘heard by’\n* Repeater and room CLI: “get” command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
+							"notes": "* Vibe pref now saved\n* Display off pref (to locked screen)\n* UI style updates\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: \u2018heard by\u2019\n* Repeater and room CLI: \u201cget\u201d command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
 						},
 						"v7.11": {
 							"files": [
@@ -1011,7 +1073,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Map view: keys 0..9 change map contrast\n* Message details: new ‘Show on Map’ menu\n* New clipboard system: long press for copy/paste\n* Locked screen redesign\n* LED alert option: now flashes keyboard backlight"
+							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Map view: keys 0..9 change map contrast\n* Message details: new \u2018Show on Map\u2019 menu\n* New clipboard system: long press for copy/paste\n* Locked screen redesign\n* LED alert option: now flashes keyboard backlight"
 						},
 						"v7.9": {
 							"files": [
@@ -1026,7 +1088,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max group channels now 4\n* Auto channel support (name starting with ‘#’)\n* Home Screen: ‘$’ key jumps to next contact with unread > 0\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added “setperm” and “get acl” support\n* Map tiles dir now “/tiles-bw” (or “/tiles” as fallback)"
+							"notes": "* Max group channels now 4\n* Auto channel support (name starting with \u2018#\u2019)\n* Home Screen: \u2018$\u2019 key jumps to next contact with unread > 0\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added \u201csetperm\u201d and \u201cget acl\u201d support\n* Map tiles dir now \u201c/tiles-bw\u201d (or \u201c/tiles\u201d as fallback)"
 						},
 						"v7.8": {
 							"files": [
@@ -1219,7 +1281,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: ‘heard by’\n* Repeater and room CLI: “get” command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
+							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: \u2018heard by\u2019\n* Repeater and room CLI: \u201cget\u201d command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
 						},
 						"v7.11": {
 							"files": [
@@ -1249,7 +1311,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Channel details: “Type ‘#’” menu\n* Message details: new ‘Show on Map’ menu\n* New clipboard system: long press scroll wheel for copy/paste"
+							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Channel details: \u201cType \u2018#\u2019\u201d menu\n* Message details: new \u2018Show on Map\u2019 menu\n* New clipboard system: long press scroll wheel for copy/paste"
 						},
 						"v7.9": {
 							"files": [
@@ -1264,7 +1326,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max group channels now 4\n* Auto channel support (name starting with ‘#’)\n* Scroll wheel disabled while screen off\n* Keyboard backlight now flashes on new message (config via LED menu option)\n* Home Screen: ‘$’ key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added “setperm” and “get acl” support"
+							"notes": "* Max group channels now 4\n* Auto channel support (name starting with \u2018#\u2019)\n* Scroll wheel disabled while screen off\n* Keyboard backlight now flashes on new message (config via LED menu option)\n* Home Screen: \u2018$\u2019 key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added \u201csetperm\u201d and \u201cget acl\u201d support"
 						},
 						"v7.7": {
 							"files": [
@@ -1279,7 +1341,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, ‘.’ and ‘,’ keys to go thru filters\n* Identity screen: new advert location pref\n* New “Permissions” screen: set Telemetry permissions\n* Canned Message: special “< prev msg>” item (re-type last msg)\n* Long press Enter and Backspace now more snappy\n* New GPS power ON / OFF setting\n* New Brightness: DAY / NIGHT setting"
+							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, \u2018.\u2019 and \u2018,\u2019 keys to go thru filters\n* Identity screen: new advert location pref\n* New \u201cPermissions\u201d screen: set Telemetry permissions\n* Canned Message: special \u201c< prev msg>\u201d item (re-type last msg)\n* Long press Enter and Backspace now more snappy\n* New GPS power ON / OFF setting\n* New Brightness: DAY / NIGHT setting"
 						},
 						"v7.6": {
 							"files": [
@@ -1354,7 +1416,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Channel details hex or base64 input\n* A-Z key press now jumps to contacts\n* ‘@‘ key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes"
+							"notes": "* Channel details hex or base64 input\n* A-Z key press now jumps to contacts\n* \u2018@\u2018 key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes"
 						},
 						"v7.0": {
 							"files": [
@@ -1435,7 +1497,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: ‘heard by’ \n* Repeater and room CLI: “get” command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
+							"notes": "* Vibe pref now saved\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: \u2018heard by\u2019 \n* Repeater and room CLI: \u201cget\u201d command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
 						},
 						"v7.11": {
 							"files": [
@@ -1465,7 +1527,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Channel details: “Type ‘#’” menu\n* Message details: new ‘Show on Map’ menu\n* New clipboard system: long press scroll wheel for copy/paste"
+							"notes": "* New network: region presets\n* Security: new PIN Lock Screen\n* Channel details: \u201cType \u2018#\u2019\u201d menu\n* Message details: new \u2018Show on Map\u2019 menu\n* New clipboard system: long press scroll wheel for copy/paste"
 						},
 						"v7.9": {
 							"files": [
@@ -1480,7 +1542,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max group channels now 4\n* Auto channel support (name starting with ‘#’)\n* Scroll wheel disabled while screen off\n* Keyboard backlight now flashes on new message (config via LED menu option)\n* Home Screen: ‘$’ key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added “setperm” and “get acl” support"
+							"notes": "* Max group channels now 4\n* Auto channel support (name starting with \u2018#\u2019)\n* Scroll wheel disabled while screen off\n* Keyboard backlight now flashes on new message (config via LED menu option)\n* Home Screen: \u2018$\u2019 key jumps to next contact with unread > 0\n* New message details screen (scroll up to msg, then select)\n* GPS Config screen redesign\n* Home Screen, tap on top-right of screen opens GPS Info\n* Repeater and room server admin CLI: added \u201csetperm\u201d and \u201cget acl\u201d support"
 						},
 						"v7.7": {
 							"files": [
@@ -1495,7 +1557,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, ‘.’ and ‘,’ keys to go thru filters\n* Identity screen: new advert location pref\n* New “Permissions” screen: set Telemetry permissions\n* Canned Message: special “< prev msg>” item (re-type last msg)\n* Long press Enter and Backspace now more snappy\n* New GPS power ON / OFF setting\n* New Brightness: DAY / NIGHT setting"
+							"notes": "* Max contacts now doubled\n* Only (home) contacts can now DM you\n* Home Screen, \u2018.\u2019 and \u2018,\u2019 keys to go thru filters\n* Identity screen: new advert location pref\n* New \u201cPermissions\u201d screen: set Telemetry permissions\n* Canned Message: special \u201c< prev msg>\u201d item (re-type last msg)\n* Long press Enter and Backspace now more snappy\n* New GPS power ON / OFF setting\n* New Brightness: DAY / NIGHT setting"
 						},
 						"v7.5": {
 							"files": [
@@ -1555,7 +1617,7 @@
 									"title": "App firmware bin (use with m5 booloader)"
 								}
 							],
-							"notes": "* Channel details hex or base64 input\n* A-Z key press now jumps to contacts\n* ‘@‘ key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes"
+							"notes": "* Channel details hex or base64 input\n* A-Z key press now jumps to contacts\n* \u2018@\u2018 key now refreshes/reorders list by most recent advert\n* MeshCore lib updates/fixes"
 						},
 						"v7.0": {
 							"files": [
@@ -1809,7 +1871,7 @@
 									"title": "App firmware"
 								}
 							],
-							"notes": "* Battery scale fix\n* UI style updates\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: ‘heard by’\n* Repeater and room CLI: “get” command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
+							"notes": "* Battery scale fix\n* UI style updates\n* Remote admin prefixes, extra spaces allowed\n* Presets updated\n* Msg details: \u2018heard by\u2019\n* Repeater and room CLI: \u201cget\u201d command (get full telemetry)\n* Channel details: Alerts ON/OFF menu"
 						},
 						"v7.12": {
 							"files": [
@@ -2354,7 +2416,6 @@
 					"github": {
 						"type": "companion",
 						"files": {
-
 							"flash-wipe": "Tbeam(_SX1276)?_companion_radio_usb.*?-merged\\.bin",
 							"flash-update": "Tbeam(_SX1276)?_companion_radio_usb.*?-[a-f0-9]{7}\\.bin"
 						}
@@ -2642,7 +2703,7 @@
 			"tooltip": "<img class='device' src='/img/gatiot_gat562.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -2694,7 +2755,7 @@
 			"tooltip": "<img class='device' src='/img/gatiot_gat562_30s.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -2995,7 +3056,7 @@
 			"icon": "/img/lora.svg",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"heltec_t114_board_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "heltec_t114_board_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"tooltip": "<img class='device' src='/img/heltec_t114.svg'>",
 			"firmware": [
 				{
@@ -3020,7 +3081,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixRecommended",
+					"notice": "otafixRecommended",
 					"github": {
 						"type": "repeater",
 						"files": {
@@ -3031,7 +3092,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixRecommended",
+					"notice": "otafixRecommended",
 					"github": {
 						"type": "room-server",
 						"files": {
@@ -3066,7 +3127,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixRecommended",
+					"notice": "otafixRecommended",
 					"subTitle": "[no display]",
 					"github": {
 						"type": "repeater",
@@ -3078,7 +3139,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixRecommended",
+					"notice": "otafixRecommended",
 					"subTitle": "[no display]",
 					"github": {
 						"type": "room-server",
@@ -3400,7 +3461,7 @@
 			"tooltip": "<img class='device' src='/img/ikoka_stick.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v7.zip",
-			"bootloader":"xiao_nrf52840_ble_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "xiao_nrf52840_ble_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -3426,7 +3487,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Repeater - 22dBm",
 					"github": {
 						"type": "repeater",
@@ -3438,7 +3499,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Room Server - 22dBm",
 					"github": {
 						"type": "room-server",
@@ -3472,7 +3533,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Repeater - 30dBm",
 					"github": {
 						"type": "repeater",
@@ -3484,7 +3545,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Room Server - 30dBm",
 					"github": {
 						"type": "room-server",
@@ -3518,7 +3579,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Repeater - 33dBm",
 					"github": {
 						"type": "repeater",
@@ -3530,7 +3591,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Room Server - 33dBm",
 					"github": {
 						"type": "room-server",
@@ -3550,7 +3611,7 @@
 			"tooltip": "<img class='device' src='/img/ikoka_nano.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v7.zip",
-			"bootloader":"xiao_nrf52840_ble_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "xiao_nrf52840_ble_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -3576,7 +3637,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Repeater - 22dBm",
 					"github": {
 						"type": "repeater",
@@ -3588,7 +3649,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Room Server - 22dBm",
 					"github": {
 						"type": "room-server",
@@ -3622,7 +3683,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Repeater - 30dBm",
 					"github": {
 						"type": "repeater",
@@ -3634,7 +3695,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Room Server - 30dBm",
 					"github": {
 						"type": "room-server",
@@ -3668,7 +3729,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Repeater - 33dBm",
 					"github": {
 						"type": "repeater",
@@ -3680,7 +3741,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixNeeded",
+					"notice": "otafixNeeded",
 					"title": "Room Server - 33dBm",
 					"github": {
 						"type": "room-server",
@@ -3700,7 +3761,7 @@
 			"tooltip": "<img class='device' src='/img/keepteen_lt1.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -3802,7 +3863,7 @@
 			"tooltip": "<img class='device' src='/img/rak_4631.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -3856,7 +3917,7 @@
 			"tooltip": "<img class='device' src='/img/rak_13302.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "wiscore_rak4631_board_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -3910,7 +3971,7 @@
 			"tooltip": "<img class='device' src='/img/rak_wismesh_tag.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"wismesh_tag_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "wismesh_tag_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -3964,7 +4025,7 @@
 			"tooltip": "<img class='device' src='/img/sensecap_solar.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v7.zip",
-			"bootloader":"sensecap_solar_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "sensecap_solar_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -4018,7 +4079,7 @@
 			"tooltip": "<img class='device' src='/img/sensecap_t1000e.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v7.zip",
-			"bootloader":"t1000_e_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "t1000_e_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -4658,7 +4719,7 @@
 			"tooltip": "<img class='device' src='/img/faketec.svg'>",
 			"type": "nrf52",
 			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
-			"bootloader":"promicro_nrf52840_bootloader-0.9.2-OTAFIX2.1.uf2",
+			"bootloader": "promicro_nrf52840_bootloader-0.9.2-OTAFIX2.1.uf2",
 			"firmware": [
 				{
 					"role": "companionBle",
@@ -4682,7 +4743,7 @@
 				},
 				{
 					"role": "repeater",
-					"notice":"otafixRecommended",
+					"notice": "otafixRecommended",
 					"github": {
 						"type": "repeater",
 						"files": {
@@ -4693,7 +4754,7 @@
 				},
 				{
 					"role": "roomServer",
-					"notice":"otafixRecommended",
+					"notice": "otafixRecommended",
 					"github": {
 						"type": "room-server",
 						"files": {
@@ -4710,7 +4771,7 @@
 			"name": "RPI Pico 2040 + WaveShare SX1262",
 			"icon": "/img/lora.svg",
 			"type": "noflash",
-			"tooltip":"<img class='device' src='/img/rpi_picow.svg'>",
+			"tooltip": "<img class='device' src='/img/rpi_picow.svg'>",
 			"firmware": [
 				{
 					"role": "companionBle",
