@@ -11,17 +11,30 @@
 
 Flash experimental MeshCore firmware builds directly from your browser (Chrome/Edge).
 
-Currently available: **T-Beam SX1262/SX1276** companion BLE firmware (v1.15.0-hermes1)
+## Firmware Variants
 
-### About This Fork
+Each release provides **two variants** per device:
 
-This fork hosts experimental firmware builds from the [HermestoAizales/MeshCore](https://github.com/HermestoAizales/MeshCore) fork, which includes:
+| Variant | Description | Filename Suffix |
+|---------|-------------|-----------------|
+| **Standard** | Normal firmware for daily use | *(none)* |
+| **Observer** | With `MESH_PACKET_LOGGING=1` — logs all mesh packets (type, route, SNR, RSSI, hash) via Serial for debugging | `-obs` |
 
-- **ESP32 Blob Storage Optimization**: Replaces per-key files in `/bl/<hex>` with a single `/adv_blobs` file. Saves ~30 KB Flash on devices with 160 contacts.
-- One-time migration of old `/bl/` files on first boot.
+Observer builds are ideal for monitoring mesh traffic, debugging packet issues, or running a dedicated observer node.
 
-### Flasher Features
+## Changes vs Upstream
+
+See the [MeshCore fork CHANGES.md](https://github.com/HermestoAizales/MeshCore/blob/main/CHANGES.md) for firmware modifications.
+
+Webflasher-specific changes:
+- **GitHub Pages subpath support**: Fixed asset loading (`history.pushState` base URL issue)
+- **Observer firmware selection**: Each device role offers standard and observer builds
+- **Auto-updated `releases.json`**: Populated automatically from GitHub Release assets via CI
+- **Community firmware compatibility**: Devices with upstream `github` config are shown even when no upstream releases match (empty version list)
+
+## Flasher Features
 
 - ESP32 flashing via Web Serial (esptool.js)
 - Custom nRF52 serial flashing based on adafruit-nrfutil
 - Serial console
+- Firmware download (direct from GitHub Release assets)
