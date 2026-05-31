@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MeshCore flasher</title>
-  <link href="/css/beer.css" rel="stylesheet">
-  <link href="/css/flasher.css" rel="stylesheet">
-  <script type="module" src="/flasher.js"></script>
+  <link href="css/beer.css" rel="stylesheet">
+  <link href="css/flasher.css" rel="stylesheet">
+  <script type="module" src="flasher.js"></script>
 </head>
 
 <body class="dark">
@@ -222,7 +222,7 @@
           <nav>
             <i>bolt</i>
             <h5 class="small max logo-top">
-              <img src="/img/meshcore.svg"> <span>flasher</span>
+              <img src="img/meshcore.svg"> <span>flasher</span>
             </h5>
             <button class="transparent hide-mobile" @click="openSerialGUI()">
               <i>manufacturing</i>
@@ -269,7 +269,7 @@
                 <li v-for="device in deviceGroup">
                   <template v-if="device.firmware.length > 0">
                     <button class="device-select transparent" @click="selected.device = device">
-                      <img class="icon" :title="device.type" :src="`/img/${device.type}.svg`" v-if="device.type !== 'noflash'">
+                      <img class="icon" :title="device.type" :src="`img/${device.type}.svg`" v-if="device.type !== 'noflash'">
                       <i v-else>developer_board</i>
                       <span>{{ device.name }}</span>
                       <div class="tooltip right max" v-if="device.tooltip" v-html="device.tooltip"></div>
@@ -315,6 +315,6 @@
       </pre>
     </div>
   </div>
-  <script src="/lib/iframeResizer.contentWindow.min.js"></script>
+  <script src="lib/iframeResizer.contentWindow.min.js"></script>
 </body>
 </html>
