@@ -603,7 +603,7 @@ function setup() {
   };
 
   const devices = computed(() => {
-    const classes = ['ripple', 'meshos', 'community'];
+    const classes = [...new Set(config.device.map(d => d.class))];
     const deviceGroups = {};
 
     let index = 0;

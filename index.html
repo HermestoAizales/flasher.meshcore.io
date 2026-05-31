@@ -253,6 +253,7 @@
                   <strong v-if="type === 'ripple'">Ripple Firmware</strong>
                   <strong v-else-if="type === 'meshos'">MeshOS Firmware</strong>
                   <strong v-else-if="type === 'community'">Community Firmware</strong>
+                  <strong v-else>{{ type.charAt(0).toUpperCase() + type.slice(1) }}</strong>
                   <div class="tooltip right max">
                     <template v-if="type === 'ripple'">
                       Freemium firmware provided by <a class="inverse-link" target="_blank" href="https://buymeacoffee.com/ripplebiz">Ripple Radios</a>
