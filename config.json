@@ -1,5 +1,5 @@
 {
-	"staticPath": "/firmware",
+	"staticPath": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1",
 	"role": {
 		"meshos": {
 			"icon": "dashboard",
@@ -81,14 +81,12 @@
 								{
 									"type": "flash-wipe",
 									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
-									"title": "Combined firmware (Flash Wipe) - RECOMMENDED",
-									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
 									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
-									"title": "Firmware only (OTA Update)",
-									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+									"title": "Firmware only (OTA Update)"
 								}
 							],
 							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot"
@@ -112,14 +110,12 @@
 								{
 									"type": "flash-wipe",
 									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
-									"title": "Combined firmware (Flash Wipe) - RECOMMENDED",
-									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
 									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
-									"title": "Firmware only (OTA Update)",
-									"url": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+									"title": "Firmware only (OTA Update)"
 								}
 							],
 							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot"
