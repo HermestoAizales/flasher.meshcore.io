@@ -94,7 +94,19 @@ function addGithubFiles() {
     }
   }
 
-  config.device = config.device.filter(device => device.firmware.some(firmware => Object.keys(firmware.version).length > 0 ));
+  // Only filter out devices where ALL firmware entries have empty versions
+  // AND no github config (i.e. truly no firmware available at all).
+  // Keep devices with github config even if no versions matched (they may
+  // have local firmware entries alongside github ones).
+  config.device = config.device.filter(device => {
+    return device.firmware.some(firmware => {
+      // Has local version entries?
+      if (Object.keys(firmware.version || {}).length > 0) return true;
+      // Has github config but no matches yet — keep it (will show as empty)
+      if (firmware.github?.files) return true;
+      return false;
+    });
+  });
 
   return config;
 }
