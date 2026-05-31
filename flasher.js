@@ -6,15 +6,6 @@ import { SerialConsole } from './lib/console.js';
 
 const searchParams = new URLSearchParams(location.search);
 const configName = searchParams.get('config')?.replaceAll(/[^a-z_-]/g, '') ?? 'config';
-
-// Detect base path (e.g. /flasher.meshcore.io/ on GitHub Pages)
-const BASE_PATH = (() => {
-  const p = window.location.pathname;
-  // If pathname starts with /{{repo}}/, use it as base
-  const m = p.match(/^(\/[^/]+\/)/);
-  return m ? m[1] : '/';
-})();
-const basePathLen = BASE_PATH.length - 1; // length of '/flasher.meshcore.io' without trailing /
 const configRes = await fetch(`${configName}.json`);
 const config = await configRes.json();
 
@@ -261,7 +252,7 @@ function setup() {
 
   const updateUrl = (replace = false) => {
     if (initializingFromUrl) return;
-    const path = BASE_PATH.replace(/\/+$/, '') + buildUrl();
+    const path = buildUrl();
     if (window.location.pathname !== path) {
       replace ? history.replaceState(null, '', path) : history.pushState(null, '', path);
     }
@@ -269,9 +260,7 @@ function setup() {
 
   const applyUrlPath = (path) => {
     initializingFromUrl = true;
-    // Strip base path prefix if present
-    const stripBase = path.startsWith(BASE_PATH) ? path.slice(BASE_PATH.length - 1) : path;
-    const segments = stripBase.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+    const segments = path.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
 
     if (segments.length === 0 || segments[0] === 'console') {
       nextTick(() => { initializingFromUrl = false; });
@@ -652,12 +641,6 @@ function setup() {
     selected.version = null;
     selected.device = null;
     applyUrlPath(window.location.pathname);
-
-    // Re-apply basePath to URL if stripped by popstate
-    const expectedPath = BASE_PATH.replace(/\/+$/, '') + buildUrl();
-    if (window.location.pathname !== expectedPath) {
-      history.replaceState(null, '', expectedPath);
-    }
   });
 
   applyUrlPath(window.location.pathname);
