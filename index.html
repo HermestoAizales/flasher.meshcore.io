@@ -2,16 +2,13 @@
 <html lang="en">
 
 <head>
+  <base href="https://hermestoaizales.github.io/flasher.meshcore.io/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MeshCore flasher</title>
-  <link href="/flasher.meshcore.io/css/beer.css" rel="stylesheet">
-  <link href="/flasher.meshcore.io/css/flasher.css" rel="stylesheet">
-  <script type="module">
-    // Inline critical path fix: rewrite relative URLs before flasher.js loads
-    window.__BASE__ = '/flasher.meshcore.io';
-  </script>
-  <script type="module" src="/flasher.meshcore.io/flasher.js"></script>
+  <link href="css/beer.css" rel="stylesheet">
+  <link href="css/flasher.css" rel="stylesheet">
+  <script type="module" src="flasher.js"></script>
 </head>
 
 <body class="dark">
@@ -226,7 +223,7 @@
           <nav>
             <i>bolt</i>
             <h5 class="small max logo-top">
-              <img :src="imgPath('meshcore.svg')"> <span>flasher</span>
+              <img src="img/meshcore.svg"> <span>flasher</span>
             </h5>
             <button class="transparent hide-mobile" @click="openSerialGUI()">
               <i>manufacturing</i>
@@ -319,6 +316,6 @@
       </pre>
     </div>
   </div>
-  <script src="/flasher.meshcore.io/lib/iframeResizer.contentWindow.min.js"></script>
+  <script src="lib/iframeResizer.contentWindow.min.js"></script>
 </body>
 </html>
