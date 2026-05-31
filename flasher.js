@@ -650,6 +650,10 @@ function setup() {
 
   applyUrlPath(window.location.pathname);
 
+  // Absolute path prefix for static assets on GitHub Pages
+  const ASSETS_BASE = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/+$/, '');
+  const imgPath = (name) => ASSETS_BASE + '/img/' + name;
+
   return {
     snackbar,
     consoleEditBox, consoleWindow, consoleMouseUp,
@@ -662,7 +666,7 @@ function setup() {
     customFirmwareLoad, getFirmwarePath,
     getSelFwValue, getRoleFwValue, getNotice, formatChangeLog,
     firmwareHasData,
-    canFlash, nrfErase
+    canFlash, nrfErase, imgPath
   }
 }
 
