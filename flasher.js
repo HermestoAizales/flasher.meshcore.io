@@ -2,7 +2,7 @@ import "./lib/beer.min.js";
 import { createApp, reactive, ref, nextTick, watch, computed } from "./lib/vue.min.js";
 import { Dfu } from "./lib/dfu.js";
 import { ESPLoader, Transport, HardReset } from "./lib/esp32.js";
-import { SerialConsole } from '/lib/console.js';
+import { SerialConsole } from './lib/console.js';
 
 const searchParams = new URLSearchParams(location.search);
 const configName = searchParams.get('config')?.replaceAll(/[^a-z_-]/g, '') ?? 'config';
