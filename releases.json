@@ -1,1 +1,441 @@
-[]
+[
+  {
+    "type": "companion",
+    "version": "v1.15.0-hermes1",
+    "notes": "## Experimental Build v1.15.0-hermes1\n\n**\u26a0\ufe0f Unofficial experimental build \u2014 use at your own risk.**\n\n### What's Changed\n- **ESP32 Blob Storage Optimization**: Replaced per-key files in /bl/&lt;hex&gt; with single /adv_blobs file (BlobRec records). Saves ~30 KB Flash on devices with 160 contacts. One-time migration on first boot.\n- T-Beam SX1262/SX1276 added to CI build matrix.\n- CI build check passing for all major platforms (ESP32, NRF52, RP2040).\n\n### Supported Platforms\n- ESP32 (T-Beam SX1262/SX1276, Heltec v3, etc.)\n- ESP32-C6 (T-Lora C6)\n- RP2040 (PicoW)\n- Limited NRF52/RP2040 STM32 (binaries only \u2014 UF2 conversion issue, fix pending)\n\n### Known Issues\n- NRF52/RP2040/STM32: UF2 files not generated (toolchain compatibility issue with local PlatformIO)\n- wio-e5-mini: SubGhz.h missing (upstream STM32WL issue)",
+    "files": [
+      {
+        "name": "Ebyte_EoRa-S3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Ebyte_EoRa-S3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Ebyte_EoRa-S3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Ebyte_EoRa-S3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Ebyte_EoRa-S3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Ebyte_EoRa-S3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Ebyte_EoRa-S3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Ebyte_EoRa-S3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_ct62_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_ct62_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_ct62_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_ct62_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_ct62_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_ct62_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_ct62_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_ct62_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_E213_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_E213_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_E213_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_E213_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_E213_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_E213_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_E213_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_E213_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "heltec_tracker_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_tracker_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "heltec_tracker_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_tracker_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "heltec_tracker_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_tracker_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "heltec_tracker_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_tracker_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_v3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_v3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_v3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_v3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_v3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "heltec_v4_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "heltec_v4_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "heltec_v4_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "heltec_v4_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "heltec_v4_tft_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_tft_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "heltec_v4_tft_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_tft_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "heltec_v4_tft_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_tft_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "heltec_v4_tft_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/heltec_v4_tft_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Paper_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Paper_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Paper_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Paper_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Paper_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Paper_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Paper_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Paper_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Tracker_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Tracker_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Tracker_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Tracker_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Tracker_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Tracker_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_Wireless_Tracker_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_Wireless_Tracker_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_WSL3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_WSL3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_WSL3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_WSL3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Heltec_WSL3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_WSL3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Heltec_WSL3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Heltec_WSL3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1276_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1276_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_T3S3_sx1276_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_T3S3_sx1276_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_TBeam_1W_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TBeam_1W_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_TBeam_1W_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TBeam_1W_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_TBeam_1W_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TBeam_1W_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_TBeam_1W_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TBeam_1W_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_TDeck_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TDeck_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_TDeck_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TDeck_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_TDeck_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TDeck_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_TDeck_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TDeck_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_TETH_Elite_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TETH_Elite_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_TETH_Elite_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TETH_Elite_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_TETH_Elite_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TETH_Elite_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_TETH_Elite_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TETH_Elite_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "LilyGo_TLora_V2_1_1_6_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TLora_V2_1_1_6_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "LilyGo_TLora_V2_1_1_6_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/LilyGo_TLora_V2_1_1_6_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "M5Stack_Unit_C6L_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/M5Stack_Unit_C6L_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "M5Stack_Unit_C6L_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/M5Stack_Unit_C6L_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "M5Stack_Unit_C6L_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/M5Stack_Unit_C6L_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "M5Stack_Unit_C6L_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/M5Stack_Unit_C6L_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1262_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1268_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1268_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1268_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1268_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1268_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1268_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Meshadventurer_sx1268_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Meshadventurer_sx1268_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "RAK_3112_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/RAK_3112_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "RAK_3112_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/RAK_3112_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "RAK_3112_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/RAK_3112_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "RAK_3112_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/RAK_3112_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Station_G2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Station_G2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Station_G2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Station_G2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Station_G2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Station_G2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Station_G2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Station_G2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "ThinkNode_M2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M2_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "ThinkNode_M2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M2_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "ThinkNode_M2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M2_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "ThinkNode_M2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M2_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "ThinkNode_M5_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M5_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "ThinkNode_M5_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M5_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "ThinkNode_M5_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M5_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "ThinkNode_M5_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/ThinkNode_M5_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "T_Beam_S3_Supreme_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/T_Beam_S3_Supreme_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "T_Beam_S3_Supreme_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/T_Beam_S3_Supreme_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Xiao_C3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_C3_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Xiao_C3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_C3_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Xiao_C3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_C3_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Xiao_C3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_C3_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Xiao_S3_WIO_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_S3_WIO_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Xiao_S3_WIO_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_S3_WIO_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin"
+      },
+      {
+        "name": "Xiao_S3_WIO_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_S3_WIO_companion_radio_usb-v1.15.0-hermes1-b005dd97-merged.bin"
+      },
+      {
+        "name": "Xiao_S3_WIO_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin",
+        "url": "https://github.com/HermestoAizales/MeshCore/releases/download/untagged-52f4dee896ef8e12e2a6/Xiao_S3_WIO_companion_radio_usb-v1.15.0-hermes1-b005dd97.bin"
+      }
+    ]
+  }
+]
