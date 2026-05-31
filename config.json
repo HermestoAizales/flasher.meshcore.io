@@ -28,27 +28,27 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0-merged.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* Standard build\n* MAX_CONTACTS=163, MAX_GROUP_CHANNELS=8"
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=18"
 						},
 						"v1.15.0-hermes1-obs": {
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs-merged.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
@@ -72,27 +72,27 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0-merged.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* Standard build\n* MAX_CONTACTS=163, MAX_GROUP_CHANNELS=8"
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=18"
 						},
 						"v1.15.0-hermes1-obs": {
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs-merged.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-158dbfd0-obs.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
