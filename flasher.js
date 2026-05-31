@@ -6,6 +6,10 @@ import { SerialConsole } from './lib/console.js';
 
 const searchParams = new URLSearchParams(location.search);
 const configName = searchParams.get('config')?.replaceAll(/[^a-z_-]/g, '') ?? 'config';
+
+// GitHub Pages subpath support
+const BASE_PATH = window.location.pathname.match(/^(\/[^/]+\/)/)?.[1] || '/';
+const stripBasePath = (p) => p.startsWith(BASE_PATH) ? p.slice(BASE_PATH.length - 1) : p;
 const configRes = await fetch(`${configName}.json`);
 const config = await configRes.json();
 
@@ -252,7 +256,7 @@ function setup() {
 
   const updateUrl = (replace = false) => {
     if (initializingFromUrl) return;
-    const path = buildUrl();
+    const path = BASE_PATH.replace(/\/+$/, '') + buildUrl();
     if (window.location.pathname !== path) {
       replace ? history.replaceState(null, '', path) : history.pushState(null, '', path);
     }
@@ -260,7 +264,8 @@ function setup() {
 
   const applyUrlPath = (path) => {
     initializingFromUrl = true;
-    const segments = path.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+    const stripped = stripBasePath(path);
+    const segments = stripped.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
 
     if (segments.length === 0 || segments[0] === 'console') {
       nextTick(() => { initializingFromUrl = false; });
