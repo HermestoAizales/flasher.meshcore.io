@@ -1,5 +1,5 @@
 {
-	"staticPath": "https://github.com/HermestoAizales/MeshCore/releases/download/companion-v1.15.0-hermes1",
+	"staticPath": "firmware",
 	"role": {
 		"meshos": {
 			"icon": "dashboard",
@@ -43,26 +43,8 @@
 		"otafixNeeded": "<article class='tertiary-container'>WARNING: We strongly recommend installing <a target='_blank' href='/firmware/${bootloader}'>OTAFIX bootloader</a> if you plan to update firmware via OTA bluetooth, as factory bootloader does not support it! <a target='_blank' href='https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#73-q-is-there-a-way-to-lower-the-chance-of-a-failed-ota-device-firmware-update-dfu'>Read more</a></article>"
 	},
 	"maker": {
-		"elecrow": {
-			"name": "Elecrow"
-		},
-		"heltec": {
-			"name": "Heltec"
-		},
-		"seeed": {
-			"name": "Seeed Studio"
-		},
-		"rak": {
-			"name": "RAK Wireless"
-		},
-		"promicro": {
-			"name": "ProMicro"
-		},
 		"lilygo": {
 			"name": "LilyGo"
-		},
-		"raspberry": {
-			"name": "Raspberry Pi"
 		}
 	},
 	"device": [
@@ -80,16 +62,31 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot"
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=8"
+						},
+						"v1.15.0-hermes1-obs": {
+							"files": [
+								{
+									"type": "flash-wipe",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local-obs-merged.bin",
+									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
+								},
+								{
+									"type": "flash-update",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-local-obs.bin",
+									"title": "Firmware only (OTA Update)"
+								}
+							],
+							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash\n* For debugging only - slightly larger binary"
 						}
 					}
 				}
@@ -109,16 +106,31 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97-merged.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-b005dd97.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot"
+							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* One-time migration on first boot\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=8"
+						},
+						"v1.15.0-hermes1-obs": {
+							"files": [
+								{
+									"type": "flash-wipe",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local-obs-merged.bin",
+									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
+								},
+								{
+									"type": "flash-update",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-local-obs.bin",
+									"title": "Firmware only (OTA Update)"
+								}
+							],
+							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash\n* For debugging only - slightly larger binary"
 						}
 					}
 				}
