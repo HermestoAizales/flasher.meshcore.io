@@ -1,8 +1,8 @@
-import "./lib/beer.min.js";
-import { createApp, reactive, ref, nextTick, watch, computed } from "./lib/vue.min.js";
-import { Dfu } from "./lib/dfu.js";
-import { ESPLoader, Transport, HardReset } from "./lib/esp32.js";
-import { SerialConsole } from './lib/console.js';
+import "/flasher.meshcore.io/lib/beer.min.js";
+import { createApp, reactive, ref, nextTick, watch, computed } from "/flasher.meshcore.io/lib/vue.min.js";
+import { Dfu } from "/flasher.meshcore.io/lib/dfu.js";
+import { ESPLoader, Transport, HardReset } from "/flasher.meshcore.io/lib/esp32.js";
+import { SerialConsole } from '/flasher.meshcore.io/lib/console.js';
 
 const searchParams = new URLSearchParams(location.search);
 const configName = searchParams.get('config')?.replaceAll(/[^a-z_-]/g, '') ?? 'config';
@@ -10,10 +10,10 @@ const configName = searchParams.get('config')?.replaceAll(/[^a-z_-]/g, '') ?? 'c
 // GitHub Pages subpath support
 const BASE_PATH = window.location.pathname.match(/^(\/[^/]+\/)/)?.[1] || '/';
 const stripBasePath = (p) => p.startsWith(BASE_PATH) ? p.slice(BASE_PATH.length - 1) : p;
-const configRes = await fetch(`${configName}.json`);
+const configRes = await fetch(`/flasher.meshcore.io/${configName}.json`);
 const config = await configRes.json();
 
-const githubRes = await fetch('releases.json');
+const githubRes = await fetch('/flasher.meshcore.io/releases.json');
 const github = await githubRes.json();
 
 const commandReference  = {
