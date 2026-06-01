@@ -28,12 +28,12 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-merged.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
@@ -43,12 +43,12 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs-merged.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs.bin",
+									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
@@ -72,12 +72,12 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-merged.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
@@ -87,12 +87,12 @@
 							"files": [
 								{
 									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs-merged.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin",
 									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
 								},
 								{
 									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-7e4f0a30-obs.bin",
+									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin",
 									"title": "Firmware only (OTA Update)"
 								}
 							],
