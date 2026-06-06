@@ -6,19 +6,46 @@
 			"title": "Companion",
 			"subTitle": "Bluetooth",
 			"tooltip": "Chat via mobile phone App or Web Client - Radio can only connect via Bluetooth"
+		},
+		"companionUsb": {
+			"icon": "usb",
+			"title": "Companion",
+			"subTitle": "USB Serial",
+			"tooltip": "Chat via USB serial connection - no Bluetooth required"
+		},
+		"repeater": {
+			"icon": "cell_tower",
+			"title": "Repeater",
+			"subTitle": "",
+			"tooltip": "Extends mesh range by rebroadcasting packets"
+		},
+		"roomServer": {
+			"icon": "forum",
+			"title": "Room Server",
+			"subTitle": "",
+			"tooltip": "Chat room server for group conversations"
+		},
+		"kissModem": {
+			"icon": "cable",
+			"title": "KISS Radio Modem",
+			"subTitle": "",
+			"tooltip": "KISS protocol modem for external host connection"
 		}
 	},
 	"maker": {
 		"lilygo": {
 			"name": "LilyGo"
+		},
+		"rak": {
+			"name": "RAK Wireless"
 		}
 	},
 	"device": [
 		{
 			"maker": "lilygo",
-			"class": "tbeam",
-			"id": "Tbeam_SX1262",
-			"name": "LilyGo T-Beam SX1262",
+			"class": "esp32",
+			"id": "LilyGo_TLora_V2_1_1_6",
+			"name": "LilyGo LoRa32 V2.1_1.6",
 			"icon": "/flasher.meshcore.io/img/lora.svg",
 			"type": "esp32",
 			"firmware": [
@@ -28,8 +55,8 @@
 					"github": {
 						"type": "companion",
 						"files": {
-							"flash-wipe": "-merged\\.bin$",
-							"flash-update": "^(?!.*-obs)(?!.*-merged).*\\.bin$"
+							"flash-wipe": "_companion_radio_ble-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_ble-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
 						}
 					}
 				},
@@ -42,8 +69,94 @@
 					"github": {
 						"type": "companion-obs",
 						"files": {
-							"flash-wipe": "-obs-merged\\.bin$",
-							"flash-update": "-obs\\.bin$"
+							"flash-wipe": "_companion_radio_ble-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_ble-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "companionUsb",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash-wipe": "_companion_radio_usb-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_usb-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "companionUsb",
+					"title": "Companion USB (Observer)",
+					"subTitle": "USB + Serial Logging",
+					"tooltip": "Companion USB firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "companion-obs",
+						"files": {
+							"flash-wipe": "_companion_radio_usb-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_usb-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"version": {},
+					"github": {
+						"type": "repeater",
+						"files": {
+							"flash-wipe": "_repeater-.*-merged\\.bin$",
+							"flash-update": "_repeater-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"title": "Repeater (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Repeater firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "repeater-obs",
+						"files": {
+							"flash-wipe": "_repeater-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_repeater-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"version": {},
+					"github": {
+						"type": "room-server",
+						"files": {
+							"flash-wipe": "_room_server-.*-merged\\.bin$",
+							"flash-update": "_room_server-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"title": "Room Server (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Room Server firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "room-server-obs",
+						"files": {
+							"flash-wipe": "_room_server-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_room_server-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "kissModem",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash-wipe": "_kiss_modem-.*-merged\\.bin$",
+							"flash-update": "_kiss_modem-(?!.*-merged).*-[a-f0-9]+\\.bin$"
 						}
 					}
 				}
@@ -53,7 +166,7 @@
 			"maker": "lilygo",
 			"class": "tbeam",
 			"id": "Tbeam_SX1276",
-			"name": "LilyGo T-Beam SX1276",
+			"name": "LilyGo T-Beam 1.2 (SX1276)",
 			"icon": "/flasher.meshcore.io/img/lora.svg",
 			"type": "esp32",
 			"firmware": [
@@ -63,8 +176,8 @@
 					"github": {
 						"type": "companion",
 						"files": {
-							"flash-wipe": "-merged\\.bin$",
-							"flash-update": "^(?!.*-obs)(?!.*-merged).*\\.bin$"
+							"flash-wipe": "_companion_radio_ble-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_ble-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
 						}
 					}
 				},
@@ -77,8 +190,277 @@
 					"github": {
 						"type": "companion-obs",
 						"files": {
-							"flash-wipe": "-obs-merged\\.bin$",
-							"flash-update": "-obs\\.bin$"
+							"flash-wipe": "_companion_radio_ble-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_ble-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"version": {},
+					"github": {
+						"type": "repeater",
+						"files": {
+							"flash-wipe": "_repeater-.*-merged\\.bin$",
+							"flash-update": "_repeater-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"title": "Repeater (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Repeater firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "repeater-obs",
+						"files": {
+							"flash-wipe": "_repeater-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_repeater-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"version": {},
+					"github": {
+						"type": "room-server",
+						"files": {
+							"flash-wipe": "_room_server-.*-merged\\.bin$",
+							"flash-update": "_room_server-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"title": "Room Server (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Room Server firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "room-server-obs",
+						"files": {
+							"flash-wipe": "_room_server-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_room_server-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "kissModem",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash-wipe": "_kiss_modem-.*-merged\\.bin$",
+							"flash-update": "_kiss_modem-(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				}
+			]
+		},
+		{
+			"maker": "lilygo",
+			"class": "tbeam",
+			"id": "Tbeam_SX1262",
+			"name": "LilyGo T-Beam (SX1262)",
+			"icon": "/flasher.meshcore.io/img/lora.svg",
+			"type": "esp32",
+			"firmware": [
+				{
+					"role": "companionBle",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash-wipe": "_companion_radio_ble-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_ble-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "companionBle",
+					"title": "Companion (Observer)",
+					"subTitle": "Bluetooth + Serial Logging",
+					"tooltip": "Companion firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "companion-obs",
+						"files": {
+							"flash-wipe": "_companion_radio_ble-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_companion_radio_ble-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"version": {},
+					"github": {
+						"type": "repeater",
+						"files": {
+							"flash-wipe": "_repeater-.*-merged\\.bin$",
+							"flash-update": "_repeater-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"title": "Repeater (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Repeater firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "repeater-obs",
+						"files": {
+							"flash-wipe": "_repeater-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_repeater-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"version": {},
+					"github": {
+						"type": "room-server",
+						"files": {
+							"flash-wipe": "_room_server-.*-merged\\.bin$",
+							"flash-update": "_room_server-(?!.*-obs)(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"title": "Room Server (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Room Server firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "room-server-obs",
+						"files": {
+							"flash-wipe": "_room_server-.*-obs-.*-merged\\.bin$",
+							"flash-update": "_room_server-.*-obs-[a-f0-9]+\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "kissModem",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash-wipe": "_kiss_modem-.*-merged\\.bin$",
+							"flash-update": "_kiss_modem-(?!.*-merged).*-[a-f0-9]+\\.bin$"
+						}
+					}
+				}
+			]
+		},
+		{
+			"maker": "rak",
+			"class": "rak",
+			"id": "RAK_4631",
+			"name": "RAK WisBlock / WisMesh (RAK 4631)",
+			"icon": "/flasher.meshcore.io/img/lora.svg",
+			"type": "nrf52",
+			"firmware": [
+				{
+					"role": "companionBle",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash": "_companion_radio_ble-.*\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "companionBle",
+					"title": "Companion (Observer)",
+					"subTitle": "Bluetooth + Serial Logging",
+					"tooltip": "Companion firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "companion-obs",
+						"files": {
+							"flash": "_companion_radio_ble-.*-obs\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "companionUsb",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash": "_companion_radio_usb-.*\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "companionUsb",
+					"title": "Companion USB (Observer)",
+					"subTitle": "USB + Serial Logging",
+					"tooltip": "Companion USB firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "companion-obs",
+						"files": {
+							"flash": "_companion_radio_usb-.*-obs\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"version": {},
+					"github": {
+						"type": "repeater",
+						"files": {
+							"flash": "_repeater-.*\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "repeater",
+					"title": "Repeater (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Repeater firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "repeater-obs",
+						"files": {
+							"flash": "_repeater-.*-obs\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"version": {},
+					"github": {
+						"type": "room-server",
+						"files": {
+							"flash": "_room_server-.*\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "roomServer",
+					"title": "Room Server (Observer)",
+					"subTitle": "+ Serial Logging",
+					"tooltip": "Room Server firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "room-server-obs",
+						"files": {
+							"flash": "_room_server-.*-obs\\.(zip|bin|hex|uf2)$"
+						}
+					}
+				},
+				{
+					"role": "kissModem",
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash": "_kiss_modem-.*\\.(zip|bin|hex|uf2)$"
 						}
 					}
 				}
