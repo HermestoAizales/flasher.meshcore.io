@@ -57,17 +57,22 @@ function toSlug(text) {
     .replace(/^-|-$/g, '');
 }
 
-function getGithubReleases(roleType, files) {
+function getGithubReleases(roleType, files, deviceId) {
   const versions = {};
   for(const [fileType, matchRE] of Object.entries(files)) {
     for(const versionType of github) {
       if(versionType.type !== roleType) { continue }
-      const version = versions[versionType.version] ??= {
+      const versionKey = roleType.endsWith('-obs')
+        ? versionType.version + ' (Observer)'
+        : versionType.version;
+      const version = versions[versionKey] ??= {
         notes: versionType.notes,
         files: []
       };
       for(const file of versionType.files) {
         if(!new RegExp(matchRE).test(file.name)) { continue }
+        // Filter by device ID — file name must start with the device prefix
+        if(deviceId && !file.name.startsWith(deviceId)) { continue }
         version.files.push({
           type: fileType,
           name: file.url,
@@ -85,7 +90,7 @@ function addGithubFiles() {
     for(const firmware of device.firmware) {
       const gDef = firmware.github;
       if(!gDef?.files) { continue }
-      firmware.version = getGithubReleases(gDef.type, gDef.files);
+      firmware.version = getGithubReleases(gDef.type, gDef.files, device.id);
 
       // clean versions without files
       for(const [verName, verValue] of Object.entries(firmware.version)) {
@@ -172,7 +177,7 @@ function setup() {
   }
 
   const getNotice = (selected) => {
-    let notice = config.notice[selected.firmware.notice] || selected.firmware.notice || '';
+    let notice = (config.notice || {})[selected.firmware.notice] || selected.firmware.notice || '';
 
     if(notice) {
       notice = notice.replaceAll(/\$\{(\w+)\}/g, (_, varName) => selected.device[varName] || '');
@@ -233,7 +238,8 @@ function setup() {
   }
 
   const getFirmwarePath = (file) => {
-    return file.name.startsWith('/') ? file.name : `${config.staticPath}/${file.name}`;
+    if (file.name.startsWith('/') || file.name.startsWith('http')) return file.name;
+    return `${config.staticPath}/${file.name}`;
   }
 
   const firmwareHasData = (firmware) => {

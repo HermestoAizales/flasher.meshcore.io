@@ -17,42 +17,33 @@
 		{
 			"maker": "lilygo",
 			"class": "tbeam",
+			"id": "Tbeam_SX1262",
 			"name": "LilyGo T-Beam SX1262",
 			"icon": "/flasher.meshcore.io/img/lora.svg",
 			"type": "esp32",
 			"firmware": [
 				{
 					"role": "companionBle",
-					"version": {
-						"v1.15.0-hermes1": {
-							"files": [
-								{
-									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-merged.bin",
-									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
-								},
-								{
-									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f.bin",
-									"title": "Firmware only (OTA Update)"
-								}
-							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=18"
-						},
-						"v1.15.0-hermes1-obs": {
-							"files": [
-								{
-									"type": "flash-wipe",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin",
-									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
-								},
-								{
-									"type": "flash-update",
-									"name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin",
-									"title": "Firmware only (OTA Update)"
-								}
-							],
-							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash"
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash-wipe": "-merged\\.bin$",
+							"flash-update": "^(?!.*-obs)(?!.*-merged).*\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "companionBle",
+					"title": "Companion (Observer)",
+					"subTitle": "Bluetooth + Serial Logging",
+					"tooltip": "Companion firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "companion-obs",
+						"files": {
+							"flash-wipe": "-obs-merged\\.bin$",
+							"flash-update": "-obs\\.bin$"
 						}
 					}
 				}
@@ -61,42 +52,33 @@
 		{
 			"maker": "lilygo",
 			"class": "tbeam",
+			"id": "Tbeam_SX1276",
 			"name": "LilyGo T-Beam SX1276",
 			"icon": "/flasher.meshcore.io/img/lora.svg",
 			"type": "esp32",
 			"firmware": [
 				{
 					"role": "companionBle",
-					"version": {
-						"v1.15.0-hermes1": {
-							"files": [
-								{
-									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-merged.bin",
-									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
-								},
-								{
-									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f.bin",
-									"title": "Firmware only (OTA Update)"
-								}
-							],
-							"notes": "Experimental build v1.15.0-hermes1\n* Blob storage optimization (saves ~30 KB Flash)\n* MAX_CONTACTS=160, MAX_GROUP_CHANNELS=18"
-						},
-						"v1.15.0-hermes1-obs": {
-							"files": [
-								{
-									"type": "flash-wipe",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin",
-									"title": "Combined firmware (Flash Wipe) - RECOMMENDED"
-								},
-								{
-									"type": "flash-update",
-									"name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin",
-									"title": "Firmware only (OTA Update)"
-								}
-							],
-							"notes": "Observer build v1.15.0-hermes1\n* MESH_PACKET_LOGGING enabled - logs all mesh packets via Serial\n* Debug output: type, route, SNR, RSSI, hash"
+					"version": {},
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash-wipe": "-merged\\.bin$",
+							"flash-update": "^(?!.*-obs)(?!.*-merged).*\\.bin$"
+						}
+					}
+				},
+				{
+					"role": "companionBle",
+					"title": "Companion (Observer)",
+					"subTitle": "Bluetooth + Serial Logging",
+					"tooltip": "Companion firmware with MESH_PACKET_LOGGING enabled — logs all mesh packets via Serial. Debug output: type, route, SNR, RSSI, hash.",
+					"version": {},
+					"github": {
+						"type": "companion-obs",
+						"files": {
+							"flash-wipe": "-obs-merged\\.bin$",
+							"flash-update": "-obs\\.bin$"
 						}
 					}
 				}

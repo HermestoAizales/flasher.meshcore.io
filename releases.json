@@ -1,5 +1,28 @@
 [
   {
+    "type": "companion-obs",
+    "version": "v1.15.0-hermes1",
+    "notes": "## Experimental Build v1.15.0-hermes1\n\n**\u26a0\ufe0f Unofficial experimental build \u2014 use at your own risk.**\n\n### What's Changed\n- **ESP32 Blob Storage Optimization**: Replaced per-key files in /bl/&lt;hex&gt; with single /adv_blobs file (BlobRec records). Saves ~30 KB Flash on devices with 160 contacts. One-time migration on first boot.\n- T-Beam SX1262/SX1276 added to CI build matrix.\n- CI build check passing for all major platforms (ESP32, NRF52, RP2040).\n\n### Supported Platforms\n- ESP32 (T-Beam SX1262/SX1276, Heltec v3, etc.)\n- ESP32-C6 (T-Lora C6)\n- RP2040 (PicoW)\n- Limited NRF52/RP2040 STM32 (binaries only \u2014 UF2 conversion issue, fix pending)\n\n### Known Issues\n- NRF52/RP2040/STM32: UF2 files not generated (toolchain compatibility issue with local PlatformIO)\n- wio-e5-mini: SubGhz.h missing (upstream STM32WL issue)\n\n### Observer Build\n- MESH_PACKET_LOGGING enabled \u2014 logs all mesh packets via Serial\n- Debug output: type, route, SNR, RSSI, hash",
+    "files": [
+      {
+        "name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin",
+        "url": "firmware/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin"
+      },
+      {
+        "name": "Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin",
+        "url": "firmware/Tbeam_SX1262_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin"
+      },
+      {
+        "name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin",
+        "url": "firmware/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs-merged.bin"
+      },
+      {
+        "name": "Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin",
+        "url": "firmware/Tbeam_SX1276_companion_radio_ble-v1.15.0-hermes1-8bfe0c8f-obs.bin"
+      }
+    ]
+  },
+  {
     "type": "companion",
     "version": "v1.15.0-hermes1",
     "notes": "## Experimental Build v1.15.0-hermes1\n\n**\u26a0\ufe0f Unofficial experimental build \u2014 use at your own risk.**\n\n### What's Changed\n- **ESP32 Blob Storage Optimization**: Replaced per-key files in /bl/&lt;hex&gt; with single /adv_blobs file (BlobRec records). Saves ~30 KB Flash on devices with 160 contacts. One-time migration on first boot.\n- T-Beam SX1262/SX1276 added to CI build matrix.\n- CI build check passing for all major platforms (ESP32, NRF52, RP2040).\n\n### Supported Platforms\n- ESP32 (T-Beam SX1262/SX1276, Heltec v3, etc.)\n- ESP32-C6 (T-Lora C6)\n- RP2040 (PicoW)\n- Limited NRF52/RP2040 STM32 (binaries only \u2014 UF2 conversion issue, fix pending)\n\n### Known Issues\n- NRF52/RP2040/STM32: UF2 files not generated (toolchain compatibility issue with local PlatformIO)\n- wio-e5-mini: SubGhz.h missing (upstream STM32WL issue)",
