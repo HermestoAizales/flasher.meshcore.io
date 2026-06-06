@@ -239,6 +239,7 @@ function setup() {
 
   const getFirmwarePath = (file) => {
     if (file.name.startsWith('/') || file.name.startsWith('http')) return file.name;
+    if (file.name.startsWith(config.staticPath + '/')) return file.name;
     return `${config.staticPath}/${file.name}`;
   }
 
